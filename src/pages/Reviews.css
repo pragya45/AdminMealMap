@@ -1,0 +1,32 @@
+/* Reviews.css */
+.review-container {
+  margin-top: 2rem;
+}
+
+.review-card {
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-review-form {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-review-form h2 {
+  margin-bottom: 1rem;
+}

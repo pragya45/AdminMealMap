@@ -1,0 +1,10 @@
+/* Dashboard.css */
+
+.dashboard-page {
+  padding: 20px;
+}
+
+.dashboard-page h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}

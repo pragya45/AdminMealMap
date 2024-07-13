@@ -1,0 +1,121 @@
+/* Users.css */
+
+/* General Styles */
+body {
+  font-family: "Inika", serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for Users page */
+.users-container {
+  padding: 20px;
+}
+
+/* Title */
+.users-container h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* User list styles */
+.users-list {
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: auto;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.user-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.user-item .MuiTypography-root {
+  font-family: "Inika", serif;
+  word-wrap: break-word;
+}
+
+.user-item .MuiGrid-item {
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
+}
+
+.user-item .actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.actions .MuiIconButton-root {
+  padding: 8px;
+}
+
+/* Specific widths for columns */
+.user-item .name-column {
+  flex: 1;
+  min-width: 100px;
+}
+
+.user-item .email-column {
+  flex: 2;
+  min-width: 200px;
+}
+
+.user-item .role-column {
+  flex: 1;
+  min-width: 50px;
+}
+
+.user-item .actions-column {
+  flex: 0.5;
+  min-width: 50px;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .user-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-item .actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

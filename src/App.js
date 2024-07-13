@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Navigate, Outlet } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
+import Sidebar from './components/Sidebar';
 
-function App() {
+const App = () => {
+  const token = localStorage.getItem('token');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {token ? (
+        <>
+          <Sidebar />
+          <div className="main-content">
+            <Outlet />
+          </div>
+        </>
+      ) : (
+        <Navigate to="/login" />
+      )}
+      <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
     </div>
   );
-}
+};
 
 export default App;
