@@ -1,3 +1,4 @@
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
@@ -11,7 +12,6 @@ import Login from './pages/Login';
 import Restaurants from './pages/Restaurants';
 import Reviews from './pages/Reviews';
 import Users from './pages/Users';
-import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 
 const theme = createTheme({
   typography: {
