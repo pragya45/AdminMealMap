@@ -39,6 +39,37 @@ body {
   margin: 20px;
 }
 
+/* Add this to your CSS file */
+.restaurant-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.modal-content {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Custom styles can be added here if necessary */
+.dashboard-container {
+  padding: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.activity-log {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+button {
+  margin-top: 10px;
+}
+
 .nav-item {
   margin: 15px 0;
   font-size: 18px;

@@ -1,4 +1,4 @@
-import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
@@ -14,15 +14,25 @@ import Reviews from './pages/Reviews';
 import Users from './pages/Users';
 
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#ff7043', // Custom primary color
+    },
+    secondary: {
+      main: '#ffca28', // Custom secondary color
+    },
+    background: {
+      default: '#f4f4f4', // Custom background color
+    },
+  },
   typography: {
-    fontFamily: 'Inika, serif',
+    fontFamily: 'Inika, serif', // Custom font family
   },
 });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <CssBaseline />
       <Router>
         <Routes>
           <Route path="/login" element={<Login />} />
